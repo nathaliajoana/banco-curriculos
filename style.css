@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'PT Serif', serif;
+    color: antiquewhite;
+}
+
+body {
+    background-image: linear-gradient(to right top, #000000, #050505, #0a0a0a, #0f0e0f, #121213);
+    background-repeat: repeat;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1%;
+    box-shadow: 1px 1px 10px 1px antiquewhite;
+}
+
+#mala {
+    font-size: 220%;
+}
+
+#logo {
+    font-family:'Didact Gothic', sans-serif;
+}
+
+#title {
+    margin-top: 5%;
+}
+
+#title h1 {
+    font-size: 300%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+fieldset {
+    display: flex;
+    justify-content: space-between;
+    border-style: none;
+    align-items: flex-end;
+}
+
+.campo {
+    padding: 5px;
+    text-align: start;
+}
+
+input {
+    width: 100%;
+    padding: 3%;
+    background-color: #11ffee00;
+
+}
+
+select {
+    width: 103%;
+    padding: 2%;
+    background-color: #11ffee00;
+    font-size: 100%;
+}
+
+select option {
+    color: #121213;
+}
+
+#data {
+    width: 100%;
+    font-size: 70%;
+    color: grey;
+}
+
+#nome, #endereco, #email {
+    width: 221%;
+}
+
+#civil, #sexo {
+    width: 100%;
+}
+
+strong {
+    color: red;
+    font-size: 50%
+}
+
+button {
+    margin-top: 5%;
+    margin-bottom: 10%;
+    padding: 5px;
+    font-size: 100%;
+    font-weight: bold;
+    color: #121213;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: #ff6b99;
+    cursor: pointer;
+}
+
+footer li:hover, a:hover{
+    color: #ff6b99;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+
+}
