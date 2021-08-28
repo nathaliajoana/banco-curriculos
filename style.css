@@ -85,7 +85,7 @@ select option {
     color: grey;
 }
 
-#nome, #endereco, #email {
+#nome, #rua, #email {
     width: 221%;
 }
 

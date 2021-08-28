@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/97fe0c8379.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+    <script src="./script2.js"></script>
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +23,7 @@
     <main>
         <div id="title">
             <h1>Banco de Talentos</h1>
-            <h3><em>Está procurando recolocação profissional? Conte com a JobsNet :)</em></h3>
+            <h3> <em>Está procurando recolocação profissional? Conte com a JobsNet :)</em> </h3>
         </div>
             <h2>Preencha já seu currículo!</h2><br>
         <div class="container">
@@ -29,105 +31,110 @@
                 <h4>DADOS PESSOAIS</h4> <hr>
                     <fieldset>
                         <div class="campo">
-                            <label for="nome">Nome Completo <strong>*</strong></label> <br>      
-                            <input type="text" id="nome" required> 
+                            <label>Nome Completo <strong>*</strong> <br>      
+                            <input name="nome" type="text" id="nome" required> 
                         </div>
                         <div class="campo">
-                            <label for="cargo">Cargo Pretendido <strong>*</strong></label> <br>
-                            <input type="text" id="cargo" required>
+                            <label>Cargo Pretendido <strong>*</strong> <br>
+                            <input nome="cargo" type="text" id="cargo" required> </label>
                         </div>
                     </fieldset>
                     <fieldset>
                         <div class="campo">                           
-                            <label for="data">Data de Nascimento <strong>*</strong></label> <br>
-                            <input type="date" id="data" required>
+                            <label>Data de Nascimento <strong>*</strong> <br>
+                            <input nome="data" type="date" id="data" required> </label>
                             </div>
                         <div class="campo">
-                            <label for="civil">Estado Civil</label><br>
-                            <select id="civil">
+                            <label>Estado Civil <br>
+                            <select name="civil" id="civil">
                                 <option class="empty"></option>
                                 <option value="solteiro">Solteiro(a)</option>
                                 <option value="casado">Casado(a)</option>
-                            </select>
+                            </select> </label>
                         </div>
                         <div class="campo">
-                            <label for="sexo">Sexo</label><br>
-                            <select id="sexo">                               
+                            <label>Sexo <br>
+                            <select name="sexo" id="sexo">                               
                                 <option class="empty"></option>
                                 <option value="feminino">Feminino</option>
                                 <option value="masculino">Masculino</option>
-                                <option value="outro">Outro</option>
-                            </select>
+                                <option value="outro">Outro</option> 
+                            </select> </label>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div class="campo">
+                            <label>CEP <strong>*</strong><br>
+                            <input name="cep" type="text" id="cep" value="" maxlength="9"
+               onblur="pesquisacep(this.value);" required> </label>
+                        </div>
+                        <div class="campo">
+                            <label>Bairro <br>
+                            <input name="bairro" type="text" id="bairro"> </label>
+                        </div>
+                        <div class="campo">
+                            <label>Cidade <br>
+                            <input name="cidade" type="text" id="cidade"> </label>
                         </div>
                     </fieldset>
                     <fieldset>
                         <div class="campo">                       
-                            <label for="endereco">Endereço <strong>*</strong></label><br>
-                            <input type="text" id="endereco" placeholder="ex: Nome da Rua, 50. Bloco A, AP 204" required>
+                            <label>Logradouro <br>
+                            <input name="rua" type="text" id="rua"> </label>
+                        </div>
+                        <div class="campo">                       
+                            <label>Número <strong>*</strong><br>
+                            <input name="numero" type="text" id="numero" required> </label>
                         </div>
                     </fieldset>
                     <fieldset>
                         <div class="campo">
-                            <label for="bairro">Bairro <strong>*</strong></label><br>
-                            <input type="text" id="bairro" required>
+                            <label>Telefone Fixo 1 <br>
+                            <input name="fixo" type="text" id="fixo"> </label>
                         </div>
                         <div class="campo">
-                            <label for="cidade">Cidade <strong>*</strong></label><br>
-                            <input type="text" id="cidade" required>
+                            <label>Telefone Fixo 2 <br>
+                            <input name="fixo2" type="text" id="fixo2"> </label>
                         </div>
                         <div class="campo">
-                            <label for="cep">CEP <strong>*</strong></label><br>
-                            <input type="text" id="cep" placeholder="00000-000" required>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <div class="campo">
-                            <label for="fixo">Telefone Fixo 1</label><br>
-                            <input type="text" id="fixo">
-                        </div>
-                        <div class="campo">
-                            <label for="fixo2">Telefone Fixo 2</label><br>
-                            <input type="text" id="fixo2">
-                        </div>
-                        <div class="campo">
-                            <label for="celular">Celular <strong>*</strong></label><br>
-                            <input type="text" id="celular" required>
+                            <label>Celular <strong>*</strong> <br>
+                            <input name="celular" type="text" id="celular" required> </label>
                         </div>
                     </fieldset>
                     <fieldset>
                         <div class="campo">
-                            <label for="email">Email <strong>*</strong></label><br>
-                            <input type="text" id="email" placeholder="ex: seunome@exemplo.com" required>
+                            <label>Email <strong>*</strong> <br>
+                            <input name="email" type="text" id="email" placeholder="ex: seunome@exemplo.com" required> </label>
                         </div>
                     </fieldset>
                 <h4>DOCUMENTOS</h4><hr>
                     <fieldset>
                         <div class="campo">
-                            <label for="id">Identidade <strong>*</strong></label><br>
-                            <input type="text" id="id" required>
+                            <label>Identidade <strong>*</strong> <br>
+                            <input name="id" type="text" id="id" maxlength="12" placeholder="somente números" required> </label>
                         </div>
                         <div class="campo">
-                            <label for="cpf">CPF <strong>*</strong></label><br>
-                            <input type="text" id="cpf" required>
+                            <label>CPF <strong>*</strong> <br>
+                            <input name="cpf" type="text" id="cpf" value="" maxlength="11" placeholder="somente números" required> </label>
                         </div>
                         <div class="campo">
-                            <label for="veiculo">Possui veículo?</label><br>
-                            <select id="veiculo">
+                            <label>Possui veículo? <br>
+                            <select name="veiculo" id="veiculo">
                                 <option class="empty"></option>
                                 <option value="sim">Sim</option>
                                 <option value="nao">Não</option>
-                            </select>
+                            </select> </label>
                         </div>
                         <div class="campo">
-                            <label for="habilitacao">Habilitação</label><br>
-                            <select id="habilitacao">
+                            <label>Habilitação <br>
+                            <select name="habilitacao" id="habilitacao">
                                 <option class="empty"></option>
                                 <option value="a">CNH A</option>
                                 <option value="b">CNH B</option>
                                 <option value="c">CNH C</option>
                                 <option value="d">CNH D</option>
                                 <option value="e">CNH E</option>
-                            </select>
+                            </select> </label>
                         </div>
                     </fieldset>
                 <button type="submit">Enviar</button>
